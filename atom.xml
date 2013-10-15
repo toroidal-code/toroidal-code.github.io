@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[kate]]></title>
+  <link href="http://katherine.io/atom.xml" rel="self"/>
+  <link href="http://katherine.io/"/>
+  <updated>2013-12-15T02:31:37-05:00</updated>
+  <id>http://katherine.io/</id>
+  <author>
+    <name><![CDATA[Katherine Whitlock]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Brick a Day]]></title>
+    <link href="http://katherine.io/blog/2013/10/15/a-brick-a-day/"/>
+    <updated>2013-10-15T00:56:00-04:00</updated>
+    <id>http://katherine.io/blog/2013/10/15/a-brick-a-day</id>
+    <content type="html"><![CDATA[<p>I know a lot of programming languages, but I&rsquo;m still not really happy with any of them. It started with PBASIC, then Objective-C, C, Common Lisp, Python, C++, Java, Ruby, Scheme, Assembly (Propeller), and now OCaml and Rust, in that order. Of all these languages, my favorites are probably Ruby, Common Lisp, and Rust.</p>
+
+<p>As you can probably tell from that, I like functional programming. The idea that any call is merely a transformation of the initial data is really cool. But there&rsquo;s a couple of bad problems I have with those three languages:</p>
+
+<ul>
+<li>Speed</li>
+<li>Portability, specifically to new architectures</li>
+<li>Adoption</li>
+</ul>
+
+
+<p>Each of these problems applies to at least two of the languages.</p>
+
+<p><a href="http://www.ruby-lang.org">Ruby</a> is flexible and powerful, but is slow as molasses. The <a href="http://rubini.us">Rubinius</a> project is definitely helping with this, being a JIT for Ruby, but <del>they still have a ways to go, as they&rsquo;re currently working on 1.9.3 support</del>. And, the overhead of a VM still exists. Out of the three languages, this definitely has the best community support (probably because of Rails, but beggers can&rsquo;t be choosers). EDIT: Apparently, rubinius reached 2.0.0 without me noticing, and now supports Ruby 2.1 syntax. Way to go, RBX!</p>
+
+<p><a href="http://common-lisp.net">Common Lisp</a> is <em>the</em> langauge for firsts. GC, cons pairs, compile-time AST editing (macros), type inference. If you can think of it, CL probably has it. And it has the speed Ruby doesn&rsquo;t, with 30+ years of academic research poured into projects like <a href="http://www.sbcl.org">SBCL</a>. But it still falls short. The CL library scene is sad, and only recently has a decent dependency management system come to fruition. Yes, I&rsquo;m looking at you, <a href="http://www.quicklisp.org">quicklisp</a>. However, cross-compiling clisp is no easy feat, and running that on a microcontroller is not going to happen.</p>
+
+<p><a href="http://www.rust-lang.org">Rust</a> is the newcomer to the scene, the proverbial hipster. There&rsquo;s a great deal of hype surrounding Rust, at least at my school, and it looks absolutely amazing. But it&rsquo;s a bit too C-like and low-level for my taste. Plus, there&rsquo;s next to no documentation for the language, the best thing being the symbiotic project the language is being developed with, <a href="https://github.com/mozilla/servo">Servo</a>. Out of all these languages, Rust is probably the closest to what I would like to work with on a daily basis.</p>
+
+<p>Since no language has the features I want, or the facilities to modify it to the degree I want, I&rsquo;ve decided to write my own language, called Brick.</p>
+
+<p>This is not a small project.</p>
+
+<p>Language design is a big deal, and I&rsquo;ve spent the last two and a half months writing syntax ideas, reconciling possible conflicts, working out how systems might interact. And slowly, I came to a point where I started to know what this would be like. Next post, I&rsquo;ll talk about some of the design decisions, and the syntax.</p>
+]]></content>
+  </entry>
+  
+</feed>
