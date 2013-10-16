@@ -16,7 +16,7 @@ As you can probably tell from that, I like functional programming. The idea that
 
 Each of these problems applies to at least two of the languages. 
 
-[Ruby](http://www.ruby-lang.org) is flexible and powerful, but is slow as molasses. The [Rubinius](http://rubini.us) project is definitely helping with this, being a JIT for Ruby, but they still have a ways to go, as they're currently working on 1.9.3 support. And, the overhead of a VM still exists. Out of the three languages, this definitely has the best community support (probably because of Rails, but beggers can't be choosers).
+[Ruby](http://www.ruby-lang.org) is flexible and powerful, but is slow as molasses. The [Rubinius](http://rubini.us) project is definitely helping with this, being a JIT for Ruby, but ~~they still have a ways to go, as they're currently working on 1.9.3 support~~. And, the overhead of a VM still exists. Out of the three languages, this definitely has the best community support (probably because of Rails, but beggers can't be choosers). EDIT: Apparently, rubinius reached 2.0.0 without me noticing, and now supports Ruby 2.1 syntax. Way to go, RBX!
 
 [Common Lisp](http://common-lisp.net) is _the_ langauge for firsts. GC, cons pairs, compile-time AST editing (macros), type inference. If you can think of it, CL probably has it. And it has the speed Ruby doesn't, with 30+ years of academic research poured into projects like [SBCL](http://www.sbcl.org). But it still falls short. The CL library scene is sad, and only recently has a decent dependency management system come to fruition. Yes, I'm looking at you, [quicklisp](http://www.quicklisp.org). However, cross-compiling clisp is no easy feat, and running that on a microcontroller is not going to happen.
 
