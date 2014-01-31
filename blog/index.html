@@ -9,7 +9,7 @@
 
 <meta name="author" content="Katherine Whitlock"> 
 
-<meta name="description" content="I know a lot of programming languages, but I&rsquo;m still not really happy with any of them. It started with PBASIC, then Objective-C, C, Common &hellip;"> <meta name="keywords" content="">
+<meta name="description" content="A lot of programmers start with C, or C++, or Java. They&rsquo;re currently the big three in the industry, with good reason: they&rsquo;re time- &hellip;"> <meta name="keywords" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -100,6 +100,153 @@ $(document).ready(
     <article class="post">
 	<h2 class="title">
 		
+		<a href="/blog/2013/12/16/functional-programming/">
+		
+			Functional Programming</a>
+	</h2>
+	<div class="entry-content">
+		<p>A lot of programmers start with C, or C++, or Java. They&rsquo;re currently the big three in the industry, with good reason: they&rsquo;re time-tried, and cross-platform.</p>
+
+<p>Other areas have their own (preferred) languages:</p>
+
+<ul>
+<li>Web:
+
+<ul>
+<li>Ruby (Rails, Sinatra, Padrino)</li>
+<li>Python (Django, Flask)</li>
+<li>Java/Scala (Play)</li>
+<li>Javascript (Node.js)</li>
+</ul>
+</li>
+<li>Academia (PLT):
+
+<ul>
+<li>Haskell</li>
+<li>Standard ML</li>
+<li>OCaml</li>
+<li>Scheme</li>
+</ul>
+</li>
+<li>Systems Programming:
+
+<ul>
+<li>C/C++ (especially embedded)</li>
+<li>Go</li>
+<li>Rust</li>
+<li>D</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Of course, these languages can also be used for general-use programming. I regularly use Ruby for quick prototyping, and then move to another language more suited to what I actually need.</p>
+
+<p>Functional programming is based on Alonzo Church&rsquo;s <a href="http://en.wikipedia.org/wiki/Lambda_calculus">λ-calculus</a>.</p>
+
+<p>One of the first real implementations of this was LISP in the late 1950&rsquo;s. Lisp attempted to offer a simple mathematical style of programming to the then only imperitive field.</p>
+
+<p>Later, other so-called &ldquo;functional&rdquo; languages emerged: Standard ML, Clean, Scheme, Common Lisp, Caml, OCaml, Haskell, Pure, etc. Only two of these are object-oriented: Common Lisp and OCaml, and neither are languages that traditional O-O programmers feel comfortable just look at. Common Lisp is obviously a Lisp, and OCaml is obviously an ML. Both are very powerful, but the syntax takes some getting used to.</p>
+
+<p>In the age of languages like Ruby and Python, this shouldn&rsquo;t be the case anymore. Ruby gives people a very close taste of what functional O-O might feel like. Scala does too. It just hasn&rsquo;t been done well (Have you ever tried to curry a method in Scala?). And if you&rsquo;re wondering why I&rsquo;m not counting Javacript in here, it&rsquo;s because Javascript doesn&rsquo;t have a &lsquo;classic&rsquo; object system, and instead uses prototypal inheritance (it&rsquo;s also not technically functional, but that&rsquo;s another rant).</p>
+
+<p>This is something I&rsquo;d like to have. Objects in functional language, that looks something like Ruby or Python. So I came up with Brick.</p>
+
+<p>Brick is functional.<br/>
+Brick is object-oriented.<br/>
+Brick looks (something) like Ruby, Python, and Scala.</p>
+
+<p>Here&rsquo;s a taste:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class Color(r : Fixnum, g : Fixnum, b : Fixnum) impl ToStr
+</span><span class='line'>  members
+</span><span class='line'>      r = r 
+</span><span class='line'>      g = g
+</span><span class='line'>      b = b
+</span><span class='line'>
+</span><span class='line'>    impl ToStr
+</span><span class='line'>        method to_str
+</span><span class='line'>            "rgb({:d}, {:d}, {:d})".format!(this.r, this.g, this.b)
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>fn main
+</span><span class='line'>  let | c = Color(12, 18, 39)
+</span><span class='line'>      puts(c.to_str()) </span></code></pre></td></tr></table></div></figure>
+
+
+<p>So let&rsquo;s look at this. We have classes, declared with the <code>class</code> keyword. Following that is the class&#8217; name, the default constructor, and the list of traits that we implement, here just <code>ToStr</code>.</p>
+
+<p>After that is the members list, which lists all the slots our class has.</p>
+
+<p>After the members list comes method declarations. Methods specifically all have the type of <code>ThisClass -&gt; something....</code>. This means that there is an implicit first parameter that has the type of the current class. The name of this parameter is <code>this</code>.</p>
+
+<p>The previous example can be simplified to</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class Color(r:Fixnum, g:Fixnum, b:Fixnum) impl ToStr
+</span><span class='line'>    impl ToStr
+</span><span class='line'>        method to_str
+</span><span class='line'>            "rgb({:s}, {:s}, {:s})".format!(this.r, this.g, this.b)
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>fn main
+</span><span class='line'>  let | c = Color(12, 18, 39)
+</span><span class='line'>      puts(c.to_str()) </span></code></pre></td></tr></table></div></figure>
+
+
+<p>So what do you think? Do you like this syntax? I like it. (It&rsquo;s pretty clean)</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-16T17:55:37-05:00" pubdate data-updated="true">Dec 16<span>th</span>, 2013</time></div>
+	
+
+
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
 		<a href="/blog/2013/10/15/a-brick-a-day/">
 		
 			A Brick a Day</a>
@@ -166,7 +313,7 @@ $(document).ready(
     
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav></div>
-	<footer id="footer" class="inner">Copyright &copy; 2013
+	<footer id="footer" class="inner">Copyright &copy; 2014
 
     Katherine Whitlock
 
