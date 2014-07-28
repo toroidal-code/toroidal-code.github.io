@@ -4,7 +4,7 @@
   <title><![CDATA[kate]]></title>
   <link href="http://katherine.io/atom.xml" rel="self"/>
   <link href="http://katherine.io/"/>
-  <updated>2014-01-31T10:47:48-05:00</updated>
+  <updated>2014-07-28T15:34:56-04:00</updated>
   <id>http://katherine.io/</id>
   <author>
     <name><![CDATA[Katherine Whitlock]]></name>
@@ -80,7 +80,17 @@ Brick looks (something) like Ruby, Python, and Scala.</p>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>class Color(r : Fixnum, g : Fixnum, b : Fixnum) impl ToStr
+</span><span class='line'>  members
+</span><span class='line'>      r = r 
+</span><span class='line'>      g = g
+</span><span class='line'>      b = b
+</span><span class='line'>
 </span><span class='line'>    impl ToStr
 </span><span class='line'>        method to_str
 </span><span class='line'>            "rgb({:d}, {:d}, {:d})".format!(this.r, this.g, this.b)
@@ -93,7 +103,31 @@ Brick looks (something) like Ruby, Python, and Scala.</p>
 
 <p>So let&rsquo;s look at this. We have classes, declared with the <code>class</code> keyword. Following that is the class&#8217; name, the default constructor, and the list of traits that we implement, here just <code>ToStr</code>.</p>
 
-<p>After the class declaration comes method declarations. Methods specifically all have the type of <code>ThisClass -&gt; something....</code>. This means that there is an implicit first parameter that has the type of the current class. The name of this parameter is <code>this</code>.</p>
+<p>After that is the members list, which lists all the slots our class has.</p>
+
+<p>After the members list comes method declarations. Methods specifically all have the type of <code>ThisClass -&gt; something....</code>. This means that there is an implicit first parameter that has the type of the current class. The name of this parameter is <code>this</code>.</p>
+
+<p>The previous example can be simplified to</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class Color(r:Fixnum, g:Fixnum, b:Fixnum) impl ToStr
+</span><span class='line'>    impl ToStr
+</span><span class='line'>        method to_str
+</span><span class='line'>            "rgb({:s}, {:s}, {:s})".format!(this.r, this.g, this.b)
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>fn main
+</span><span class='line'>  let | c = Color(12, 18, 39)
+</span><span class='line'>      puts(c.to_str()) </span></code></pre></td></tr></table></div></figure>
+
 
 <p>So what do you think? Do you like this syntax? I like it. (It&rsquo;s pretty clean)</p>
 ]]></content>
