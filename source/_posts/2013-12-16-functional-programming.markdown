@@ -44,7 +44,7 @@ Brick looks (something) like Ruby, Python, and Scala.
 
 Here's a taste:
 
-```brick
+```
 class Color(r : Fixnum, g : Fixnum, b : Fixnum) impl ToStr
 	members
 	    r = r 
@@ -69,7 +69,7 @@ After the members list comes method declarations. Methods specifically all have 
 
 The previous example can be simplified to
 
-```brick
+```
 class Color(r:Fixnum, g:Fixnum, b:Fixnum) impl ToStr
     impl ToStr
         method to_str
