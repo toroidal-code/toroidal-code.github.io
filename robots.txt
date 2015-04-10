@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://katherine.io/sitemap.xml 
+Sitemap: http://toroidal-code.github.io/sitemap.xml 

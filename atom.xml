@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[kate]]></title>
-  <link href="http://katherine.io/atom.xml" rel="self"/>
-  <link href="http://katherine.io/"/>
-  <updated>2015-04-10T14:11:33-04:00</updated>
-  <id>http://katherine.io/</id>
+  <link href="http://toroidal-code.github.io/atom.xml" rel="self"/>
+  <link href="http://toroidal-code.github.io/"/>
+  <updated>2015-04-10T14:14:11-04:00</updated>
+  <id>http://toroidal-code.github.io/</id>
   <author>
     <name><![CDATA[Katherine Whitlock]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Functional Programming]]></title>
-    <link href="http://katherine.io/blog/2013/12/16/functional-programming/"/>
+    <link href="http://toroidal-code.github.io/blog/2013/12/16/functional-programming/"/>
     <updated>2013-12-16T17:55:37-05:00</updated>
-    <id>http://katherine.io/blog/2013/12/16/functional-programming</id>
+    <id>http://toroidal-code.github.io/blog/2013/12/16/functional-programming</id>
     <content type="html"><![CDATA[<p>A lot of programmers start with C, or C++, or Java. They&rsquo;re currently the big three in the industry, with good reason: they&rsquo;re time-tried, and cross-platform.</p>
 
 <p>Other areas have their own (preferred) languages:</p>
@@ -135,9 +135,9 @@ Brick looks (something) like Ruby, Python, and Scala.</p>
   
   <entry>
     <title type="html"><![CDATA[A Brick a Day]]></title>
-    <link href="http://katherine.io/blog/2013/10/15/a-brick-a-day/"/>
+    <link href="http://toroidal-code.github.io/blog/2013/10/15/a-brick-a-day/"/>
     <updated>2013-10-15T00:56:00-04:00</updated>
-    <id>http://katherine.io/blog/2013/10/15/a-brick-a-day</id>
+    <id>http://toroidal-code.github.io/blog/2013/10/15/a-brick-a-day</id>
     <content type="html"><![CDATA[<p>I know a lot of programming languages, but I&rsquo;m still not really happy with any of them. It started with PBASIC, then Objective-C, C, Common Lisp, Python, C++, Java, Ruby, Scheme, Assembly (Propeller), and now OCaml and Rust, in that order. Of all these languages, my favorites are probably Ruby, Common Lisp, and Rust.</p>
 
 <p>As you can probably tell from that, I like functional programming. The idea that any call is merely a transformation of the initial data is really cool. But there&rsquo;s a couple of bad problems I have with those three languages:</p>

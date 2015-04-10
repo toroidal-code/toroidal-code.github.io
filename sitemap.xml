@@ -1,39 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://katherine.io/blog/2013/10/15/a-brick-a-day/</loc>
+        <loc>http://toroidal-code.github.io/blog/2013/10/15/a-brick-a-day/</loc>
         <lastmod>2014-07-28T15:25:06-04:00</lastmod>
     </url>
     <url>
-        <loc>http://katherine.io/blog/2013/12/16/functional-programming/</loc>
+        <loc>http://toroidal-code.github.io/blog/2013/12/16/functional-programming/</loc>
         <lastmod>2014-07-28T15:34:52-04:00</lastmod>
     </url>
     <url>
-        <loc>http://katherine.io/blog/</loc>
+        <loc>http://toroidal-code.github.io/blog/</loc>
         <lastmod>2014-07-28T15:34:52-04:00</lastmod>
     </url>
     <url>
-        <loc>http://katherine.io/blog/archives/</loc>
+        <loc>http://toroidal-code.github.io/blog/archives/</loc>
         <lastmod>2014-07-28T15:34:52-04:00</lastmod>
     </url>
     <url>
-        <loc>http://katherine.io/</loc>
+        <loc>http://toroidal-code.github.io/</loc>
         <lastmod>2014-07-28T15:34:52-04:00</lastmod>
     </url>
     <url>
-        <loc>http://katherine.io/about/</loc>
+        <loc>http://toroidal-code.github.io/about/</loc>
         <lastmod>2014-07-28T15:25:06-04:00</lastmod>
     </url>
     <url>
-        <loc>http://katherine.io/archives/</loc>
+        <loc>http://toroidal-code.github.io/archives/</loc>
         <lastmod>2014-07-28T15:34:52-04:00</lastmod>
     </url>
     <url>
-        <loc>http://katherine.io/robots.txt</loc>
+        <loc>http://toroidal-code.github.io/robots.txt</loc>
         <lastmod>2014-07-28T15:25:06-04:00</lastmod>
     </url>
     <url>
-        <loc>http://katherine.io/portfolio/</loc>
+        <loc>http://toroidal-code.github.io/portfolio/</loc>
         <lastmod>2014-07-28T15:25:06-04:00</lastmod>
     </url>
 </urlset>
